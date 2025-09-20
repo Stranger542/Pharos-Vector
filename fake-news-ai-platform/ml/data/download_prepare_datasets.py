@@ -143,6 +143,6 @@ def create_splits(isot_extract_path):
     print("---------------------------------")
 
 
-if __name__ == "_main_":
+if __name__ == "__main__":
     isot_extract_path = download_and_check_datasets()
     create_splits(isot_extract_path)
