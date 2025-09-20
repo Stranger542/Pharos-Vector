@@ -1,0 +1,5 @@
+aws_region   = "us-west-2"
+vpc_cidr     = "10.0.0.0/16"
+db_name      = "fakenewsdb"
+db_username  = "postgres"
+db_password  = "your_db_password_here"

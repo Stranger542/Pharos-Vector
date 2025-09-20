@@ -1,0 +1,8 @@
+.factual-check ul {
+  list-style-type: disc;
+  padding-left: 18px;
+}
+
+.factual-check li {
+  margin-bottom: 6px;
+}

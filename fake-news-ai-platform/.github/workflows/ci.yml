@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backend-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.10
+      - name: Install backend requirements
+        run: |
+          pip install -r backend/requirements.txt
+          pip install pytest
+      - name: Run backend tests
+        run: |
+          pytest backend/app/tests
+
+  frontend-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm install
+      - name: Run frontend tests
+        working-directory: ./frontend
+        run: npm test -- --watchAll=false

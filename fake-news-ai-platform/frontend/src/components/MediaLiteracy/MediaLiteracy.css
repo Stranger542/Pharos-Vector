@@ -1,0 +1,18 @@
+/* Basic styling for all media literacy components */
+h3 {
+  color: #004466;
+  margin-bottom: 8px;
+}
+
+button {
+  margin: 6px;
+  padding: 6px 12px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #005f99;
+}

@@ -1,0 +1,12 @@
+.credibility-report {
+  font-family: Arial, sans-serif;
+}
+
+.highlight {
+  background-color: #ffe559;
+  cursor: help;
+  margin: 2px;
+  padding: 1px;
+  border-radius: 2px;
+  display: inline-block;
+}

@@ -74,3 +74,4 @@ def create_splits():
 if __name__ == "__main__":
     download_datasets()
     create_splits()
+    print("All done!")
